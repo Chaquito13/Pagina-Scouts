@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--PASSI PEREZ, Gian Franco; QUAGLIARDI, Martina-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <!--Link CSS-->
+    <link rel="stylesheet" href="./css/Detalle.css">
+    <!--Link de iconos font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--Link de la fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header id="headerr">
+
+        <img src="./img/Logo.png" class="logonav"  alt="logo">
+
+        <ul class="menu">
+          <li class="item"><a href="index.html">Inicio</a></li>
+          <li class="item"><a href="detalle.html">Formar Parte</a></li>
+        </ul>
+      </header>
+
+    <main>
+        <form action="" class="formulario" id="formulario">
+            <div class="formulario__grupo" id="grupo__foto" >
+                <div class="formulario__grupo-input" id="img">
+                    <img src="./img/avatardefault.png" alt="avatar" id="img-registro">
+                    <input type="file" name="foto" id="foto" accept="image/*" class="formulario__input">
+                    
+                    <label for="foto" id="cargar">Cargar foto</label><i class="fa-solid fa-circle-xmark formulario__validacion-estado"></i>
+                </div>
+                <p class="formulario__input-error-foto-ast">
+                    *
+                </p>
+                <p class="formulario__input-error-foto">
+                    Complete el campo.
+                </p>
+            </div>
+            <div class="formulario__grupo" id="grupo__nombre">
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" id="nombre" placeholder="Nombre" name="nombre">
+                    <i class="fa-solid fa-circle-xmark formulario__validacion-estado"></i>
+                </div>
+                <p class="formulario__input-error-ast">
+                    *
+                </p>
+                <p class="formulario__input-error">
+                    El nombre debe contener letras y espacios.
+                </p>
+            </div>
+            <div class="formulario__grupo" id="grupo__apellido">
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" id="apellido" placeholder="Apellido" name="apellido">
+                    <i class="fa-solid fa-circle-xmark formulario__validacion-estado"></i>
+                </div>
+                <p class="formulario__input-error-ast">
+                    *
+                </p>
+                <p class="formulario__input-error">
+                    El apellido debe contener letras y espacios.
+                </p>
+            </div>
+            <div class="formulario__grupo" id="grupo__email">
+                <div class="formulario__grupo-input">
+                    <input type="email" class="formulario__input" id="email" placeholder="Email" name="email">
+                    <i class="fa-solid fa-circle-xmark formulario__validacion-estado"></i>
+                </div>
+                <p class="formulario__input-error-ast">
+                    *
+                </p>
+                <p class="formulario__input-error">
+                    El email debe contener el formato @.
+                </p>
+            </div>
+            <div class="formulario__grupo" id="grupo__fechanac">
+                <div class="formulario__grupo-input">
+                    <input type="date" class="formulario__input" id="fechanac" placeholder="Fecha de cumpleaños" name="fechanac" max="2018-11-03" >
+                    <i class="fa-solid fa-circle-xmark formulario__validacion-estado"></i>
+                </div>
+                <p class="formulario__input-error-ast">
+                    *
+                </p>
+                <p class="formulario__input-error">
+                    Ingrese su fecha de cumpleaños. Debe ser mayor de 5 años.
+                </p>
+            </div>
+            <div class="formulario__grupo" id="grupo__localidad">
+                <div class="formulario__grupo-input" >
+                    <select name="localidad" id="localidad" placeholder="" class="formulario__input" name="localidad"><!--select de localidad-->
+                        <option value="">Localidad</option>
+                        <option value="">La Falda</option>
+                        <option value="">Huerta Grande</option>
+                        <option value="">Valle Hermoso</option>
+                        <option value="">Villa Giardino</option>
+                    </select>
+                    <i class="fa-solid fa-circle-xmark formulario__validacion-estado"></i>
+                </div>
+                <p class="formulario__input-error-ast">
+                    *
+                </p>
+                <p class="formulario__input-error">
+                    Seleccione su localidad.
+                </p>
+            </div>
+            <div class="formulario__grupo opciones-radio" id="grupo__dias">
+                <label for="cantidad" class="formulario_label">¿Cuántos días?</label>
+                <div class="formulario__grupo-input">
+                    <span class="opcion-radio">
+                        <input type="radio" id="dos" name="cantidad" checked="" class="formulario__input">
+                        <label for="dos">Dos</label>
+                    </span>
+            
+                    <span class="opcion-radio">
+                    <input type="radio" id="tres" name="cantidad" class="formulario__input"><label for="tres">Tres</label>
+                    </span>
+            
+                    <span class="opcion-radio">
+                    <input type="radio" id="cinco" name="cantidad" class="formulario__input">
+                    <label for="cinco">Cinco</label>
+                    </span>
+                    <i class="fa-solid fa-circle-xmark formulario__validacion-estado"></i>
+                </div>
+                <p class="formulario__input-error-ast-rdb-chk">
+                    *
+                </p>
+                <p class="formulario__input-error-rdb-chk">
+                    Seleccione una opción.
+                </p>
+            </div>
+            <div class="formulario__grupo" id="grupo__horario">
+                <label for="horario" class="formulario_label">¿Que turno atenderas?</label>
+                <div class="formulario__grupo-input opciones-radio">
+                        <span class="opcion-radio2">
+                        <input type="radio" id="mañana" name="horario" checked="">
+                        <label for="mañana">Mañana</label>
+                        </span>
+                    
+                        <span class="opcion-radio2">
+                        <input type="radio" id="tarde" name="horario"><label for="tarde">Tarde</label>
+                        </span>
+                        
+                        <span class="opcion-radio2">
+                        <input type="radio" id="noche" name="horario">
+                        <label for="noche">Noche</label>
+                        </span>
+                        <i class="fa-solid fa-circle-xmark formulario__validacion-estado"></i>
+                </div>
+                <p class="formulario__input-error-ast">
+                    
+                </p>
+                <p class="formulario__input-error">
+                    
+                </p>
+            </div>
+            <div class="formulario__grupo" id="grupo__experiencia">
+                <label for="experiencia" class="formulario_label">¿Tenes experiencia previa?</label>
+                <div class="formulario__grupo-input opciones-radio">
+                    <span class="opcion-radio3">
+                        <input type="radio" id="si" name="experiencia" checked="">
+                        <label for="si">Sí</label>
+                        </span>
+                    
+                        <span class="opcion-radio3">
+                        <input type="radio" id="no" name="experiencia"><label for="no">No</label>
+                        </span>
+                    
+                </div>
+            </div>
+            <div class="formulario__grupo" id="grupo__actividades">
+                <label for="actividad" class="formulario_label">Selecciona tus actividades favoritas</label>
+                <div class="formulario__grupo-input">
+                    <span class="opcion-chk">
+                        <input type="checkbox" name="actividad" id="Senderismo">
+                        <label for="Senderismo">Senderismo</label>
+                    </span>
+                    <span class="opcion-chk">
+                        <input type="checkbox" name="actividad" id="Campamento">
+                        <label for="Campamento">Campamento</label>
+                    </span>
+                    <span class="opcion-chk">
+                        <input type="checkbox" name="actividad" id="natacion">
+                        <label for="natacion">Natación</label>
+                    </span>
+                    <span class="opcion-chk">
+                        <input type="checkbox" name="actividad" id="rappel">
+                        <label for="rappel">Rappel</label>
+                    </span>
+                    <i class="fa-solid fa-circle-xmark formulario__validacion-estado"></i>
+                </div>
+                
+                <p class="formulario__input-error-rdb-chk">
+                    
+                </p>
+                
+            </div>
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p> <i class="fa-solid fa-triangle-exclamation"></i><b>ERROR:</b> Por favor complete el formulario.</p>
+            </div>
+            <div class="div-random"></div>
+            <div class="btnCancelar">
+                <button id="btnCancelar" class="formulario__bt" type="button">Cancelar</button>
+            </div>
+            <div class="formulario__grupo formulario__grupo-enviar">
+                <button type="submit" class="formulario__bt">Enviar</button>
+            </div>
+        </form>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <h3>Scouts Argentina</h3>
+            <p>¡Nuestras redes sociales!</p>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/ScoutsArgentina/?locale=es_LA" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/ScoutsArgentina" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.youtube.com/@scoutsdeargentinasa/videos" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2023 QUASSI. diseño by <span>QUASSI</span></p>
+        </div>
+    </footer>
+
+
+</body>
+<!--Link SCRIPT-->
+<script src="./javascript/index.js"></script>
+</html>
